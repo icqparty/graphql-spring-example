@@ -31,6 +31,9 @@ PRIMARY KEY (`id`)
 CREATE TABLE `advs` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `object_id` int(11) NULL,
+`created_at` datetime NULL,
+`update_at` datetime NULL,
+`deleted_at` datetime NULL,
 PRIMARY KEY (`id`) 
 );
 
