@@ -2,7 +2,7 @@ package ru.icqparty.apifirebody.models;
 
 import io.leangen.graphql.annotations.GraphQLQuery;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
