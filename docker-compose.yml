@@ -1,0 +1,23 @@
+#mongo-db:
+#  container_name: mongo_db
+#  restart: always
+#  image: mongo:latest
+#  ports:
+#    - 27017:27017
+#  volumes:
+#    - ./data/mongo/:/data/db
+#    - ./backup/:/backup
+
+mysql-db:
+  container_name: mysql_db
+  restart: always
+  image: mysql:5.6
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    MYSQL_DATABASE: ${MYSQL_DATABASE}
+    MYSQL_USER: ${MYSQL_USER}
+    MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+  volumes:
+    - ./data/mysql/:/var/lib/mysql

@@ -4,19 +4,21 @@ import io.leangen.graphql.annotations.GraphQLArgument;
 import io.leangen.graphql.annotations.GraphQLQuery;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import ru.icqparty.apifirebody.models.Company;
+import ru.icqparty.apifirebody.models.User;
 
 @Component
-public class CompanyService {
+public class UserService {
 
 
     @GraphQLQuery(name = "company")
-    public Company getById(@GraphQLArgument(name = "id") Integer id) {
-        Company company=  new Company();
-        company.setName("ssss");
-        company.setId(23);
+    public User getById(@GraphQLArgument(name = "id") Integer id) {
+        User user=  new User();
+        user.setName("ssss");
+        user.setId(23);
 
-      return company;
+      return user;
     }
+
+
 
 }

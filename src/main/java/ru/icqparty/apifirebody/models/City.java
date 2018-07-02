@@ -2,12 +2,21 @@ package ru.icqparty.apifirebody.models;
 
 import io.leangen.graphql.annotations.GraphQLQuery;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
-public class Company {
+@Entity
+public class City {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Integer id;
 
     private String name;
-    private Integer id;
+
     private Date registrationDate;
 
     @GraphQLQuery(name = "name", description = "A person's name")
