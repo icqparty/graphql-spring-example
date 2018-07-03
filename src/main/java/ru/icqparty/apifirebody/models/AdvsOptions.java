@@ -3,14 +3,12 @@ package ru.icqparty.apifirebody.models;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
+import java.util.Set;
 
-@Document(collection = "adv_options")
+@Data
 public class AdvsOptions {
-    private int id;
+
     private String name;
     private String value;
-    private Integer advId;
-
 
 }

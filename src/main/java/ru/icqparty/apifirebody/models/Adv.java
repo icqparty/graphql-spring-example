@@ -4,10 +4,9 @@ import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.sql.Timestamp;
-import java.util.Objects;
+import java.util.Set;
 
 @Data
-
 @Document(collection = "advs")
 public class Adv {
     private int id;
@@ -16,6 +15,7 @@ public class Adv {
     private Timestamp updateAt;
     private Timestamp deletedAt;
 
+    private Set<AdvsOptions> options;
 
 
 }
