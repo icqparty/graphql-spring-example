@@ -1,8 +1,8 @@
 package ru.icqparty.apifirebody.repositories;
 
 import org.springframework.data.repository.CrudRepository;
-import ru.icqparty.apifirebody.models.Sauna;
-import ru.icqparty.apifirebody.models.User;
+import ru.icqparty.apifirebody.models.Saunas;
+import ru.icqparty.apifirebody.models.Users;
 
-public interface SaunaRepository extends CrudRepository<Sauna,String> {
+public interface SaunaRepository extends CrudRepository<Saunas,String> {
 }

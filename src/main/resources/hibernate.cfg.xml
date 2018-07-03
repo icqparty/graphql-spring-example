@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/mysql_firebody</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <mapping class="ru.icqparty.apifirebody.models.Adv"/>
+    <mapping class="ru.icqparty.apifirebody.models.AdvOption"/>
+    <mapping class="ru.icqparty.apifirebody.models.City"/>
+    <mapping class="ru.icqparty.apifirebody.models.Client"/>
+    <mapping class="ru.icqparty.apifirebody.models.Sauna"/>
+    <mapping class="ru.icqparty.apifirebody.models.SaunasClient"/>
+    <mapping class="ru.icqparty.apifirebody.models.SaunasHall"/>
+    <mapping class="ru.icqparty.apifirebody.models.SaunasImage"/>
+    <mapping class="ru.icqparty.apifirebody.models.SaunasPhone"/>
+    <mapping class="ru.icqparty.apifirebody.models.User"/>
+    <mapping class="ru.icqparty.apifirebody.models.Advs"/>
+    <mapping class="ru.icqparty.apifirebody.models.AdvsOptions"/>
+    <mapping class="ru.icqparty.apifirebody.models.Cities"/>
+    <mapping class="ru.icqparty.apifirebody.models.Clients"/>
+    <mapping class="ru.icqparty.apifirebody.models.Saunas"/>
+    <mapping class="ru.icqparty.apifirebody.models.SaunasClients"/>
+    <mapping class="ru.icqparty.apifirebody.models.SaunasHalls"/>
+    <mapping class="ru.icqparty.apifirebody.models.SaunasImages"/>
+    <mapping class="ru.icqparty.apifirebody.models.SaunasPhones"/>
+    <mapping class="ru.icqparty.apifirebody.models.Users"/>
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

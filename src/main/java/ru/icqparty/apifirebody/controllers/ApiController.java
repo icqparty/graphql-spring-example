@@ -36,6 +36,8 @@ public class ApiController {
                 .withBasePackages("ru.icqparty.apifirebody")
                 .withOperationsFromSingleton(userService)
                 .generate();
+
+
         graphQL = GraphQL.newGraphQL(schema).build();
 
         ExecutionResult executionResult = graphQL.execute(ExecutionInput.newExecutionInput()
