@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import ru.icqparty.apifirebody.models.Sauna;
+import ru.icqparty.apifirebody.services.SaunaService;
 import ru.icqparty.apifirebody.services.UserService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +27,9 @@ public class ApiController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private SaunaService saunaService;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(ApiController.class);
 
     private  GraphQL graphQL;
@@ -35,6 +40,7 @@ public class ApiController {
         GraphQLSchema schema = new GraphQLSchemaGenerator()
                 .withBasePackages("ru.icqparty.apifirebody")
                 .withOperationsFromSingleton(userService)
+                .withOperationsFromSingleton(saunaService)
                 .generate();
 
 

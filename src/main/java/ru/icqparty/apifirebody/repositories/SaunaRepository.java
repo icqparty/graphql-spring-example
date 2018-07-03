@@ -1,8 +1,8 @@
 package ru.icqparty.apifirebody.repositories;
 
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.CrudRepository;
-import ru.icqparty.apifirebody.models.Saunas;
-import ru.icqparty.apifirebody.models.Users;
+import ru.icqparty.apifirebody.models.Sauna;
 
-public interface SaunaRepository extends CrudRepository<Saunas,String> {
+public interface SaunaRepository extends MongoRepository<Sauna,String> {
 }
